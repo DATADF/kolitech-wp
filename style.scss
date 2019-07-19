@@ -1,0 +1,70 @@
+@import "scss/variables";
+@import "scss/bootswatch";
+
+.navbar {
+    .navbar-brand {
+        img {
+            width: 50%;
+        }
+    }
+    
+    .nav-item {
+        .active {
+            color: $primary;
+        }
+    }
+
+    .nav-link,
+    .dropdown-item {
+        color: $dark !important;
+        font-size: .8rem;
+
+        &:active {
+            color: $my-blue !important;
+        }
+
+        &:hover {
+            color: $my-blue !important;
+        }
+    }
+}
+
+////////////////////////
+.hero {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: url('../../image/home-office.jpg');
+
+
+
+    .carousel {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: $primary;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-inner {
+        text-align: center;
+    }
+
+    .carousel-indicators {
+        li {
+            width: 20px;
+            height: 20px;
+            background-color: $my-blue;
+        }
+    }
+}
+
+.about {
+    min-height: 100vh;
+    background-color: $secondary;
+}
