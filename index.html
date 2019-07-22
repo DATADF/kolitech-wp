@@ -16,17 +16,17 @@
 
     <link rel="stylesheet" href="css/compressed/style.min.css">
   </head>
-  <body data-spy='scroll' data-target='#navbarResponsive' data-offset="100">
+  <body data-spy='scroll' data-target='#scroll' data-offset="100">
 
     <!-- Navgation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="scroll navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/"><img src="image/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#scroll">
                 <span class="navbar-toggler"><i class="fas fa-bars"></i></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="collapse navbar-collapse" id="scroll">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Home</a>
@@ -49,34 +49,40 @@
     <section id="home" class="hero">
         
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <h1>Primeiro slide</h1>
+            <div class="container">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="scroll carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>Lorem, ipsum dolor.</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                        <a href="#contact" class="btn btn-my">Read More</a>
+                    </div>
+                    <div class="carousel-item">
+                        <h1>Lorem ipsum dolor sit .</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <a href="#contact" class="btn btn-my">Read More</a>
+                    </div>
+                    <div class="carousel-item ">
+                        <h1>Lorem ipsum.</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+                        <a href="#contact" class="btn btn-my">Read More</a>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <h1>Segundo slide</h1>
-                </div>
-                <div class="carousel-item">
-                    <h1>Terceiro slide</h1>
-                </div>
-                <div class="carousel-item">
-                    <h1>Quarto slide</h1>
-                </div>
+                <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Prev</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a> -->
             </div>
-            <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Prev</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a> -->
         </div>
+        
     </section>
 
     <section id="about" class="about py-5">

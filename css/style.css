@@ -181,8 +181,12 @@
   cursor: pointer;
 }
 
+.navbar .navbar-brand {
+  width: 200px;
+}
+
 .navbar .navbar-brand img {
-  width: 60%;
+  width: 80%;
 }
 
 .navbar .nav-item > .nav-link.active {
@@ -213,6 +217,14 @@
       -ms-flex-align: center;
           align-items: center;
   background-image: url("../../image/home-office.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-origin: border-box;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .hero .carousel {
@@ -224,18 +236,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   color: #00b8dd;
   background: rgba(0, 0, 0, 0.8);
 }
 
-.hero .carousel-inner {
-  text-align: center;
+.hero .carousel-inner,
+.hero h2 {
+  text-align: left;
 }
 
 .hero .carousel-indicators li {
   width: 20px;
   height: 20px;
   background-color: #00b8dd;
+}
+
+.hero .carousel-item {
+  width: 100%;
+  padding: 20px;
 }
 
 .about {
