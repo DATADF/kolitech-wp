@@ -1,0 +1,31 @@
+.navbar {
+
+    .navbar-toggler {
+        
+        border: 0;
+        padding: 10px 5px 10px 3px;
+        cursor: pointer;
+    }
+    
+    
+    .navbar-brand {
+        img {
+            width: 60%;
+        }
+    }
+
+    .nav-item>.nav-link.active {
+        color: $my-blue !important;
+    }
+
+
+    .nav-link,
+    .dropdown-item {
+        color: $dark !important;
+        font-size: .8rem;
+
+        &:hover {
+            color: $my-blue !important;
+        }
+    }
+}

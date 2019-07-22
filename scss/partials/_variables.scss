@@ -6,9 +6,9 @@
 //
 
 $white: #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #f7f7f7 !default;
 $gray-200: #F8F5F0 !default;
-$gray-300: #DFD7CA !default;
+$gray-300: rgb(223, 223, 223) !default;
 $gray-400: #ced4da !default;
 $gray-500: #98978B !default;
 $gray-600: #8E8C84 !default;
@@ -30,19 +30,21 @@ $teal: #20c997 !default;
 $cyan: #29ABE0 !default;
 
 $primary: $my-blue !default;
-$secondary: $gray-600 !default;
+$secondary: $white !default;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $orange !default;
 $danger: $red !default;
-$light: $gray-200 !default;
-$dark: $gray-800 !default;
+$light: $white !default;
+$dark: $gray-900 !default;
+
+$text: $black !default;
 
 $yiq-contrasted-threshold: 170 !default;
 
 // Body
 
-$body-color: $gray-800 !default;
+$body-color: $white !default;
 
 // Links
 
@@ -68,9 +70,9 @@ $headings-font-weight: 400 !default;
 
 // Dropdowns
 
-$dropdown-link-color: $gray-600 !default;
+$dropdown-link-color: $my-blue !default;
 $dropdown-link-hover-color: $dropdown-link-color !default;
-$dropdown-link-hover-bg: $gray-200 !default;
+$dropdown-link-hover-bg: $gray-100 !default;
 
 $dropdown-link-active-color: $dropdown-link-color !default;
 $dropdown-link-active-bg: $dropdown-link-hover-bg !default;
@@ -84,7 +86,7 @@ $nav-tabs-border-color: $gray-300 !default;
 $nav-tabs-link-hover-border-color: $gray-300 !default;
 $nav-tabs-link-active-bg: $white !default;
 
-$nav-pills-link-active-color: $gray-600 !default;
+$nav-pills-link-active-color: $my-blue !default;
 $nav-pills-link-active-bg: $gray-200 !default;
 
 // Navbar
@@ -92,7 +94,7 @@ $nav-pills-link-active-bg: $gray-200 !default;
 $navbar-dark-hover-color: $white !default;
 
 $navbar-light-hover-color: $black !default;
-$navbar-light-active-color: $black !default;
+$navbar-light-active-color: $my-blue !default;
 
 // Pagination
 
