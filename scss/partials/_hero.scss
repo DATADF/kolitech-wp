@@ -21,16 +21,21 @@
         height: 100vh;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+
         color: $primary;
         background: rgba(0, 0, 0, 0.8);
     }
 
     .carousel-inner,
     h2 {
-        text-align: left;
+        text-align: center;
     }
 
+    .carousel-inner {
+        display: flex;
+        align-items: center;
+    }
+    
     .carousel-indicators {
         li {
             width: 20px;
@@ -42,6 +47,26 @@
     .carousel-item {
         width: 100%;
         padding: 20px;
+    }
+}
+
+/* max-width  */
+@media screen and (max-width: 600px) {
+    .hero {
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .carousel-item {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
 
     }
 }

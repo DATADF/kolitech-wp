@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    position: relative;
+}
+
+.my-btn-outline {
+    text-transform: capitalize;
+    font-weight: 400;
+    color: $secondary;
+    background: transparent !important;
+    border: 2px solid $secondary;
+
+    &:hover {
+        color: $my-blue;
+        background: $secondary !important;
+        border: 2px solid $secondary !important;
+    }
+}
+
+.my-btn-primary {
+    color: $secondary;
+    background-color: $primary !important;
+
+    &:hover {
+        color: $secondary;
+        background: $gray-600 !important;
+    }
+}
+
+.text {
+    color: $secondary;
+
+    &-primary {
+        color: $primary !important;
+    }
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 576px) {
+
+    .flex-container {
+        flex-direction: column;
+    }
+}
