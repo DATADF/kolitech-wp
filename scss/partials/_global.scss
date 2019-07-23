@@ -34,7 +34,7 @@ body {
 }
 
 .my-btn-primary {
-    color: $secondary;
+    color: $secondary !important;
     background-color: $primary !important;
 
     &:hover {

@@ -1,7 +1,7 @@
 .articles {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     margin-right: 30px;
 
     li {
@@ -66,13 +66,14 @@
 }
 
 .sidebar {
-    width: 30%;
+    width: 20%;
 
     h2 {
         text-align: left;
         font-size: 1.5rem;
         font-weight: 400;
         color: $primary;
+        margin-bottom: 30px;
     }
 
     img {
@@ -82,26 +83,30 @@
 
 
 
-    .last-posts>div {
+    .last-posts {
+        margin-top: 20px;
+        
+        div {
 
         display: flex;
         flex-direction: column;
 
-        small {
-            font-size: 1.5rem;
-            color: $gray-500;
-        }
-
-        a {
-            width: 100%;
-            text-transform: capitalize;
-            color: $primary;
-            font-size: 1rem;
-            margin-bottom: 10px;
-            text-decoration: none;
-
-            &:hover {
+            small {
+                font-size: 1.5rem;
                 color: $gray-500;
+            }
+
+            a {
+                width: 100%;
+                text-transform: capitalize;
+                color: $primary;
+                font-size: 1rem;
+                margin-bottom: 10px;
+                text-decoration: none;
+
+                &:hover {
+                    color: $gray-500;
+                }
             }
         }
     }

@@ -36,7 +36,7 @@ body {
 }
 
 .my-btn-primary {
-  color: #fff;
+  color: #fff !important;
   background-color: #00b8dd !important;
 }
 
@@ -572,7 +572,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70%;
+  width: 80%;
   margin-right: 30px;
 }
 
@@ -634,7 +634,7 @@ body {
 }
 
 .sidebar {
-  width: 30%;
+  width: 20%;
 }
 
 .sidebar h2 {
@@ -642,6 +642,7 @@ body {
   font-size: 1.5rem;
   font-weight: 400;
   color: #00b8dd;
+  margin-bottom: 30px;
 }
 
 .sidebar img {
@@ -649,7 +650,11 @@ body {
   image-rendering: optimizeQuality;
 }
 
-.sidebar .last-posts > div {
+.sidebar .last-posts {
+  margin-top: 20px;
+}
+
+.sidebar .last-posts div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,12 +664,12 @@ body {
           flex-direction: column;
 }
 
-.sidebar .last-posts > div small {
+.sidebar .last-posts div small {
   font-size: 1.5rem;
   color: #98978B;
 }
 
-.sidebar .last-posts > div a {
+.sidebar .last-posts div a {
   width: 100%;
   text-transform: capitalize;
   color: #00b8dd;
@@ -673,7 +678,7 @@ body {
   text-decoration: none;
 }
 
-.sidebar .last-posts > div a:hover {
+.sidebar .last-posts div a:hover {
   color: #98978B;
 }
 
