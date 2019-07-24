@@ -1,7 +1,11 @@
 .about {
     min-height: 100vh;
-    background-color: $gray-200;
-    color: $dark;
+    background-color: $gray-200 !important;
+    color: $dark !important;
+
+    strong {
+        color: $primary !important;
+    }
 
     figure {
         width: 100%;
@@ -32,7 +36,7 @@
     text-align: right;
 
     h3 {
-        color: $primary;
+        color: $primary !important;
         font-weight: 300;
     }
 }
@@ -43,7 +47,7 @@
     flex-direction: column;
 
     h3 {
-        color: $gray-900;
+        color: $gray-900 !important;
         font-weight: 300;
     }
 

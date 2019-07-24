@@ -22,31 +22,31 @@ body {
 }
 
 .my-btn-outline {
-  text-transform: capitalize;
-  font-weight: 400;
-  color: #fff;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+  color: #ffffff !important;
   background: transparent !important;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff !important;
 }
 
 .my-btn-outline:hover {
-  color: #00b8dd;
-  background: #fff !important;
-  border: 2px solid #fff !important;
+  color: #00b8dd !important;
+  background: #ffffff !important;
+  border: 2px solid #ffffff !important;
 }
 
 .my-btn-primary {
-  color: #fff !important;
+  color: #ffffff !important;
   background-color: #00b8dd !important;
 }
 
 .my-btn-primary:hover {
-  color: #fff;
+  color: #ffffff !important;
   background: #8E8C84 !important;
 }
 
 .text {
-  color: #fff;
+  color: #ffffff;
 }
 
 .text-primary {
@@ -76,7 +76,7 @@ body {
 }
 
 .bg-dark {
-  background-color: #fff !important;
+  background-color: #ffffff !important;
 }
 
 .bg-light {
@@ -108,11 +108,11 @@ body {
 }
 
 .btn-success, .btn-warning {
-  color: #fff;
+  color: #ffffff;
 }
 
 .btn-my:hover {
-  color: #fff;
+  color: #ffffff;
   background-color: #00b8dd;
 }
 
@@ -189,7 +189,7 @@ body {
 .alert-secondary,
 .alert-secondary > th,
 .alert-secondary > td {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .alert-success,
@@ -225,17 +225,17 @@ body {
 .alert-light,
 .alert-light > th,
 .alert-light > td {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .alert-light,
 .alert-light a:not(.btn),
 .alert-light .alert-link {
-  color: #fff;
+  color: #ffffff;
 }
 
 .badge-success, .badge-warning {
-  color: #fff;
+  color: #ffffff;
 }
 
 .close {
@@ -245,6 +245,10 @@ body {
 
 .close:hover {
   color: #acacac;
+}
+
+.bg-light {
+  background-color: red !important;
 }
 
 .navbar .navbar-toggler {
@@ -296,7 +300,7 @@ body {
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero .carousel {
@@ -355,8 +359,12 @@ body {
 
 .about {
   min-height: 100vh;
-  background-color: #F8F5F0;
-  color: #212529;
+  background-color: #F8F5F0 !important;
+  color: #212529 !important;
+}
+
+.about strong {
+  color: #00b8dd !important;
 }
 
 .about figure {
@@ -390,7 +398,7 @@ body {
 }
 
 .skills h3 {
-  color: #00b8dd;
+  color: #00b8dd !important;
   font-weight: 300;
 }
 
@@ -406,7 +414,7 @@ body {
 }
 
 .experience h3 {
-  color: #212529;
+  color: #212529 !important;
   font-weight: 300;
 }
 
@@ -443,7 +451,11 @@ body {
 .contact {
   min-height: 100vh;
   background-color: #212529;
-  color: #fff;
+  color: #ffffff;
+}
+
+.contact strong {
+  color: #00b8dd !important;
 }
 
 .contact .means-contact {
@@ -467,7 +479,7 @@ body {
 
 .contact .means-contact h2,
 .contact .form-contact h2 {
-  color: #00b8dd;
+  color: #00b8dd !important;
   text-align: left;
   font-size: 1.5rem;
 }
@@ -503,7 +515,7 @@ body {
 }
 
 .contact ul li i {
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
   font-size: 2.5rem;
 }
@@ -524,7 +536,7 @@ body {
   }
   .means-contact h2 {
     margin-top: 20px;
-    color: #00b8dd;
+    color: #00b8dd !important;
     text-align: left;
     font-size: 1.5rem;
   }
@@ -535,7 +547,7 @@ body {
     width: 100% !important;
   }
   .form-contact h2 {
-    color: #00b8dd;
+    color: #00b8dd !important;
     text-align: center;
     font-size: 1.5rem;
   }
@@ -543,7 +555,7 @@ body {
 
 .categories {
   height: 100vh;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #212529;
 }
 
@@ -577,7 +589,7 @@ body {
 }
 
 .articles li .active {
-  color: #fff;
+  color: #ffffff;
   background-color: #00b8dd;
 }
 
@@ -722,4 +734,4 @@ body {
     color: #98978B;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

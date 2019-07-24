@@ -1,50 +1,4 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sandstone/bootstrap.min.css">
-
-    <title>KOLI.TECH</title>
-
-    <link rel="stylesheet" href="css/compressed/style.min.css">
-  </head>
-  <body data-spy='scroll' data-target='#scroll' data-offset="100">
-
-    <!-- Navgation -->
-    <nav class="scroll navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/"><img src="image/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#scroll">
-                <span class="navbar-toggler"><i class="fas fa-bars"></i></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="scroll">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="blog.html" class="btn btn-my">Blog</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navgation -->
+<?php get_header(); ?>
 
     <!-- Hero -->
     <section id="home" class="hero">
@@ -73,14 +27,6 @@
                         <button href="single.html" class="btn my-btn-outline">Read More</button>
                     </div>
                 </div>
-                <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Prev</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a> -->
             </div>
         </div>
         
@@ -124,7 +70,7 @@
     <!-- Contact -->
     <section id="contact" class="contact py-5">
         <div class="container">
-            <h2 class="pt-5">Contact <strong class="text-primary">US</strong></h2>
+            <h2 class="pt-5">Contact <strong>US</strong></h2>
     
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ex eaque earum nulla reiciendis quas, rem
                 tempore eius corporis distinctio illum voluptas! Quaerat, amet nihil! Eos saepe dolore provident fugiat
@@ -193,20 +139,4 @@
     </section>
     <!-- Contact -->
 
-    <!-- Start Footer -->
-    <section id="footer" class="text-light footer">
-        <div class="container">
-            <small>&#169; koli.tech 2019</small>
-        </div>
-    </section>
-    <!-- End Footer -->
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="js/scroll-suave.js"></script>
-  </body>
-</html>
+<?php get_footer(); ?> 

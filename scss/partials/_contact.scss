@@ -3,6 +3,10 @@
     background-color: $dark;
     color: $light;
 
+    strong {
+        color: $primary !important;
+    }
+
     .means-contact {
         display: flex;
         flex-direction: column;
@@ -16,7 +20,7 @@
         margin-top: 10px;
 
         h2 {
-            color: $primary;
+            color: $primary !important;
             text-align: left;
             font-size: 1.5rem;
         }
@@ -71,7 +75,7 @@
 
         h2 {
             margin-top: 20px;
-            color: $primary;
+            color: $primary !important;
             text-align: left;
             font-size: 1.5rem;
         }
@@ -85,7 +89,7 @@
         width: 100% !important;
 
         h2 {
-            color: $primary;
+            color: $primary !important;
             text-align: center;
             font-size: 1.5rem;
         }

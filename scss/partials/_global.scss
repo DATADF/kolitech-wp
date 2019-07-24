@@ -20,14 +20,14 @@ body {
 }
 
 .my-btn-outline {
-    text-transform: capitalize;
-    font-weight: 400;
-    color: $secondary;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    color: $secondary !important;
     background: transparent !important;
-    border: 2px solid $secondary;
+    border: 2px solid $secondary !important;
 
     &:hover {
-        color: $my-blue;
+        color: $my-blue !important;
         background: $secondary !important;
         border: 2px solid $secondary !important;
     }
@@ -38,7 +38,7 @@ body {
     background-color: $primary !important;
 
     &:hover {
-        color: $secondary;
+        color: $secondary !important;
         background: $gray-600 !important;
     }
 }
