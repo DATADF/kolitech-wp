@@ -1,32 +1,43 @@
+<?php /* template name: home */ ?>
+
 <?php get_header(); ?>
 
     <!-- Hero -->
     <section id="home" class="hero">
         
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="ExampleCarouselID" class="carousel slide" data-ride="carousel" data-interval="7000">
             <div class="container">
+                <!-- Bootstrap 4 Carousel with WordPress Loop -->
+                <?php
+                    $args = array(
+                        'post_type' => 'post',
+                        'category_name' => 'destaque-slide',
+                        'showposts' => -1,
+                        'post_status' => 'publish',
+                        'order' => 'DESC'
+                    ); 
+                    $the_query = new WP_Query ( $args ); 
+                ?>
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <!-- Start Carousel Indicator Loop -->
+		            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <li 
+                        data-target="#ExampleCarouselID" 
+                        data-slide-to="<?php echo $the_query->current_post; ?>" 
+                        class="<?php if ( $the_query->current_post == 0 ) : ?>active<?php endif; ?>">
+                    </li>
+                    <?php endwhile; endif; ?>
                 </ol>
+                
                 <div class="scroll carousel-inner">
-                    <div class="carousel-item active">
-                        <h1>Lorem, ipsum dolor.</h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-                        <button href="single.html" class="btn my-btn-outline">Read More</button>
+                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <div class="carousel-item <?php if ( $the_query->current_post == 0 ) : ?>active<?php endif; ?>">
+                        <h1><?php the_title(); ?></h1>
+                        <h2><?php the_excerpt(); ?></h2>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="btn my-btn-outline">Read More</a>
                     </div>
-                    <div class="carousel-item">
-                        <h1>Lorem ipsum dolor sit .</h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                        <button href="single.html" class="btn my-btn-outline">Read More</button>
-                    </div>
-                    <div class="carousel-item ">
-                        <h1>Lorem ipsum.</h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-                        <button href="single.html" class="btn my-btn-outline">Read More</button>
-                    </div>
-                </div>
+                    <?php endwhile;	endif; ?>
+                </div> 
             </div>
         </div>
         
@@ -36,30 +47,58 @@
     <!-- Start about -->
     <section id="about" class="about py-5">
         <div  class="container">
-            <h2 class="pt-5">About <strong class="text-primary">US</strong></h2>
-
+            <!-- Início loop About -->
+            <?php
+                $argsAbout = array(
+                    'post_type' => 'about',
+                    'showposts' => 1,
+                    'post_status' => 'publish',
+                    'order' => 'DESC'
+                ); 
+                $the_query = new WP_Query ( $argsAbout ); 
+            ?>
+            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <h2 class="pt-5"><?php the_title();?> <strong class="text-primary">US</strong></h2>
             <figure>
-                <img src="image/avatar.png" alt="avatar kleber">
+                <?php
+                    if ( has_post_thumbnail() ) {
+                        the_post_thumbnail();
+                    }
+                ?>
             </figure>
+            <div class="text-center"><?php the_content(); ?></div>
+            
 
-            <p class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ex eaque earum nulla reiciendis quas, rem tempore eius corporis distinctio illum voluptas! Quaerat, amet nihil! Eos saepe dolore provident fugiat facilis laudantium fuga ipsam distinctio, alias hic voluptate velit assumenda accusamus? Iusto dolorem doloremque similique deleniti incidunt? Quod, fugit quas.</p>
 
             <div class="flex-container">
                 <div class="skills">
                     <h3>skills</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ex eaque earum nulla reiciendis quas, rem tempore
-                        eius corporis distinctio illum voluptas! Quaerat, amet nihil! Eos saepe dolore provident fugiat facilis laudantium
-                        fuga ipsam distinctio, alias hic voluptate velit assumenda accusamus? Iusto dolorem doloremque similique deleniti
-                        incidunt? Quod, fugit quas.</p>
+                    <p><?php the_field('skill'); ?></p>
                 </div>
+                <?php endwhile; wp_reset_postdata(); endif; ?>
+                <!-- Fim loop About -->
+                
+                
                 <div class="experience">
                     <h3>experiences</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel natus nesciunt quae quos ipsam unde.</p>
+                    <p>Confira abaixo algumas das empresas onde trabalhei.</p>
                     <ul>
-                        <li><a href="#">Empresa tal</a> - <small>2000 to 2003</small></li>
-                        <li><a href="#">Mais uma empresa</a> - <small>2004 to 2010</small></li>
-                        <li><a href="#">Outra empresa</a> - <small>2010 to 2016</small></li>
-                        <li><a href="#">Esta empresa também</a> - <small>2016 to 2018</small></li>
+                        <!-- Início loop Experience -->
+                        <?php
+                            $argsExperience = array(
+                                'post_type' => 'experience',
+                                'showposts' => -1,
+                                'post_status' => 'publish',
+                                'order' => 'ASC'
+                            ); 
+                            $the_query = new WP_Query ( $argsExperience ); 
+                        ?>
+                        <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('input'); ?> to <?php the_field('exit'); ?></small></li>
+
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+                        <!-- Fim loop Experience -->
                     </ul>
                 </div>
             </div>

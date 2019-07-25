@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html <?php language_attributes(); ?>>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -22,6 +22,8 @@
             </button>
     
             <div class="collapse navbar-collapse" id="scroll">
+
+            
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Home</a>
@@ -33,7 +35,7 @@
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="blog.html" class="btn btn-my">Blog</a>
+                        <a href="blog" class="btn btn-my">Blog</a>
                     </li>
                 </ul>
             </div>

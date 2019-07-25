@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <!-- Hero -->
-    <section id="home" class="hero">
+    <!-- <section id="home" class="hero">
         
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="container">
@@ -30,7 +30,7 @@
             </div>
         </div>
         
-    </section>
+    </section> -->
     <!-- Hero -->
 
     <!-- Start about -->
