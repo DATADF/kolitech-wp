@@ -72,7 +72,7 @@ body {
 }
 
 .bg-primary {
-  background-color: #212529 !important;
+  background-color: #00b8dd !important;
 }
 
 .bg-dark {
@@ -247,6 +247,10 @@ body {
   color: #acacac;
 }
 
+.progress-bar {
+  background-color: #00b8dd !important;
+}
+
 .bg-light {
   background-color: red !important;
 }
@@ -367,6 +371,10 @@ body {
   color: #00b8dd !important;
 }
 
+.about .text-bar {
+  color: #ffffff;
+}
+
 .about figure {
   width: 100%;
   max-width: 960px;
@@ -393,13 +401,43 @@ body {
   width: 49%;
 }
 
-.skills {
-  text-align: right;
+.skills h3,
+.experience h3 {
+  color: #00b8dd;
+  font-weight: 400;
 }
 
-.skills h3 {
-  color: #00b8dd !important;
-  font-weight: 300;
+.skills {
+  text-align: left;
+}
+
+.skills .block-skill-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.skills .block-skill-progress h2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  color: #212529;
+}
+
+.skills .block-skill-progress i {
+  font-size: 2rem;
+  margin-right: 10px;
 }
 
 .experience {
@@ -411,11 +449,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.experience h3 {
-  color: #212529 !important;
-  font-weight: 300;
 }
 
 .experience li {

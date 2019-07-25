@@ -10,7 +10,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 // Navbar ======================================================================
 
 .bg-primary {
-    background-color: $dark !important;
+    background-color: $primary !important;
 }
 
 .bg-dark {
@@ -274,5 +274,9 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 }
 
 // Progress bars ===============================================================
+
+.progress-bar {
+    background-color: $primary !important;
+}
 
 // Containers ==================================================================

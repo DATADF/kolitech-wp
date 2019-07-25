@@ -75,6 +75,33 @@
                 <div class="skills">
                     <h3>skills</h3>
                     <p><?php the_field('skill'); ?></p>
+
+                    <div class="block-skill-progress">
+                        <h2><i class="fas fa-server" style="color: black;"></i> Server</h2>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="text-bar">80%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-skill-progress">
+                        <h2><i class="fab fa-html5" style="color: orange;"></i> HTML5</h2>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                <div class="text-bar">90%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-skill-progress">
+                        <h2><i class="fab fa-css3" style="color: $primary;"></i> CSS3</h2>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <div class="text-bar">70%</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <?php endwhile; wp_reset_postdata(); endif; ?>
                 <!-- Fim loop About -->
