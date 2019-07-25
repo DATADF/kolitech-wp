@@ -14,6 +14,7 @@
                         'category_name' => 'destaque-slide',
                         'showposts' => -1,
                         'post_status' => 'publish',
+                        'orderby' => 'rand',
                         'order' => 'DESC'
                     ); 
                     $the_query = new WP_Query ( $args ); 
@@ -89,7 +90,7 @@
                                 'post_type' => 'experience',
                                 'showposts' => -1,
                                 'post_status' => 'publish',
-                                'order' => 'ASC'
+                                'order' => 'DESC'
                             ); 
                             $the_query = new WP_Query ( $argsExperience ); 
                         ?>
