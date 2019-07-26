@@ -68,66 +68,104 @@
                 ?>
             </figure>
             <div class="text-center"><?php the_content(); ?></div>
+            <?php endwhile; wp_reset_postdata(); endif; ?>
+            <!-- Fim loop About -->
             
-
 
             <div class="flex-container">
                 <div class="skills">
                     <h3>skills</h3>
-                    <p><?php the_field('skill'); ?></p>
+                    <?php $the_query = new WP_Query ( $argsAbout ); ?>
+                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <p><?php the_field('short_text_skills'); ?></p>
+                    <?php endwhile; wp_reset_postdata(); endif; ?>
+                    
+
+
+                    <!-- Início loop Skills -->
+                    <?php
+                        $argsSkills = array(
+                            'post_type' => 'skill',
+                            'showposts' => -1,
+                            'post_status' => 'publish',
+                            'order' => 'ASC'
+                        ); 
+                        $the_query = new WP_Query ( $argsSkills ); 
+                    ?>
+                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
                     <div class="block-skill-progress">
-                        <h2><i class="fas fa-server" style="color: black;"></i> Server</h2>
+                        <h2>
+                            <i class="<?php the_field('icon'); ?>" style="color: <?php the_field('icon_color'); ?>;"></i> 
+                            <?php the_field('skill'); ?> // <?php the_field('skill_percentage'); ?>%
+                        </h2>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                <div class="text-bar">80%</div>
-                            </div>
+                            <div class="progress-bar" style="width: <?php the_field('skill_percentage'); ?>%" role="progressbar" aria-valuenow="<?php the_field('skill_percentage'); ?>" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-
-                    <div class="block-skill-progress">
-                        <h2><i class="fab fa-html5" style="color: orange;"></i> HTML5</h2>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                <div class="text-bar">90%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="block-skill-progress">
-                        <h2><i class="fab fa-css3" style="color: $primary;"></i> CSS3</h2>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                <div class="text-bar">70%</div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endwhile; wp_reset_postdata(); endif; ?>
+                    <!-- Fim loop Skills -->
                 </div>
-                <?php endwhile; wp_reset_postdata(); endif; ?>
-                <!-- Fim loop About -->
                 
                 
-                <div class="experience">
-                    <h3>experiences</h3>
-                    <p>Confira abaixo algumas das empresas onde trabalhei.</p>
-                    <ul>
-                        <!-- Início loop Experience -->
-                        <?php
-                            $argsExperience = array(
-                                'post_type' => 'experience',
-                                'showposts' => -1,
-                                'post_status' => 'publish',
-                                'order' => 'DESC'
-                            ); 
-                            $the_query = new WP_Query ( $argsExperience ); 
-                        ?>
+                
+                <div class="certification-courses">
+                    <div class="certification">
+                        <h3>Certifications</h3>
+                        
+                        <?php $the_query = new WP_Query ( $argsAbout ); ?>
                         <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('input'); ?> to <?php the_field('exit'); ?></small></li>
-
+                            <p><?php the_field('short_text_certifications'); ?></p>
                         <?php endwhile; wp_reset_postdata(); endif; ?>
-                        <!-- Fim loop Experience -->
-                    </ul>
+                        
+
+                        <ul>
+                            <!-- Início loop certification -->
+                            <?php
+                                $argsCertifications = array(
+                                    'post_type' => 'certification',
+                                    'showposts' => -1,
+                                    'post_status' => 'publish',
+                                    'order' => 'DESC'
+                                ); 
+                                $the_query = new WP_Query ( $argsCertifications ); 
+                            ?>
+                            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                                <li><a href="<?php the_permalink(); ?>"><?php the_field('certification'); ?></a> - <small><?php the_field('date'); ?></small></li>
+
+                            <?php endwhile; wp_reset_postdata(); endif; ?>
+                            <!-- Fim loop certification -->
+                        </ul>
+                    </div>
+
+                    <div class="courses">
+                        <h3>courses</h3>
+                        
+                        <?php $the_query = new WP_Query ( $argsAbout ); ?>
+                        <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            <p><?php the_field('short_text_courses'); ?></p>
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+
+                        <ul>
+                            <!-- Início loop courses -->
+                            <?php
+                                $argsCourses = array(
+                                    'post_type' => 'courses',
+                                    'showposts' => -1,
+                                    'post_status' => 'publish',
+                                    'order' => 'DESC'
+                                ); 
+                                $the_query = new WP_Query ( $argsCourses ); 
+                            ?>
+                            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                                <li><a href="<?php the_permalink(); ?>"><?php the_field('course'); ?></a> - <small><?php the_field('start'); ?> to <?php the_field('end'); ?></small></li>
+
+                            <?php endwhile; wp_reset_postdata(); endif; ?>
+                            <!-- Fim loop courses -->
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -3,25 +3,25 @@
 ////////////////////////////////////////////////////////////
 /* Custom Post Type Start */
 // Creating a About Custom Post Type
-function kolitech_about_experience_custom_post_type() {
+function kolitech_about_certification_custom_post_type() {
 	$labels = array(
-		'name'                => __( 'Experiences' ),
-		'singular_name'       => __( 'About'),
-		'menu_name'           => __( 'Experiences'),
-		'parent_item_colon'   => __( 'Parent Experience'),
-		'all_items'           => __( 'All Experiences'),
-		'view_item'           => __( 'View Experience'),
-		'add_new_item'        => __( 'Add New Experience'),
+		'name'                => __( 'Certifications' ),
+		'singular_name'       => __( 'Certification'),
+		'menu_name'           => __( 'Certifications'),
+		'parent_item_colon'   => __( 'Parent Certification'),
+		'all_items'           => __( 'All Certifications'),
+		'view_item'           => __( 'View Certification'),
+		'add_new_item'        => __( 'Add New Certification'),
 		'add_new'             => __( 'Add New'),
-		'edit_item'           => __( 'Edit Experience'),
-		'update_item'         => __( 'Update Experience'),
-		'search_items'        => __( 'Search Experience'),
+		'edit_item'           => __( 'Edit Certification'),
+		'update_item'         => __( 'Update Certification'),
+		'search_items'        => __( 'Search Certification'),
 		'not_found'           => __( 'Not Found'),
 		'not_found_in_trash'  => __( 'Not found in Trash')
 	);
 	$args = array(
-		'label'               => __( 'Experience'),
-		'description'         => __( 'Best Crunchify Experience'),
+		'label'               => __( 'Certification'),
+		'description'         => __( 'Best Crunchify Certifications'),
 		'labels'              => $labels,
 		'supports'            => array('title'),
 		'public'              => true,
@@ -39,8 +39,8 @@ function kolitech_about_experience_custom_post_type() {
         'capability_type'     => 'page',
         'menu_icon'   => 'dashicons-awards',
 );
-	register_post_type( 'experience', $args );
+	register_post_type( 'certification', $args );
 }
-add_action( 'init', 'kolitech_about_experience_custom_post_type', 0 );
+add_action( 'init', 'kolitech_about_certification_custom_post_type', 0 );
 
 /*Custom Post type end*/

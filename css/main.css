@@ -397,12 +397,12 @@ body {
 }
 
 .skills,
-.experience {
+.certification-courses {
   width: 49%;
 }
 
 .skills h3,
-.experience h3 {
+.certification-courses h3 {
   color: #00b8dd;
   font-weight: 400;
 }
@@ -440,7 +440,7 @@ body {
   margin-right: 10px;
 }
 
-.experience {
+.certification-courses {
   text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,18 +451,18 @@ body {
           flex-direction: column;
 }
 
-.experience li {
+.certification-courses li {
   list-style: none;
 }
 
-.experience a {
+.certification-courses a {
   text-transform: capitalize;
-  color: #00b8dd;
+  color: #212529;
+  text-decoration: underline;
 }
 
-.experience a:hover {
-  color: #212529;
-  text-decoration: none;
+.certification-courses a:hover {
+  color: #00b8dd;
 }
 
 /* max-width  */
@@ -472,7 +472,7 @@ body {
     max-width: 150px;
   }
   .skills,
-  .experience {
+  .certification-courses {
     width: 100%;
     margin-top: 20px;
   }

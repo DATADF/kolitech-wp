@@ -32,7 +32,7 @@
 
 
 .skills,
-.experience {
+.certification-courses {
     width: 49%;
 
     h3 {
@@ -68,7 +68,7 @@
 
 }
 
-.experience {
+.certification-courses {
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -81,11 +81,11 @@
 
     a {
         text-transform: capitalize;
-        color: $primary;
+        color: $dark;
+        text-decoration: underline;
 
         &:hover {
-            color: $dark;
-            text-decoration: none;
+            color: $primary;
         }
     }
 }
@@ -103,7 +103,7 @@
     }
 
     .skills,
-    .experience {
+    .certification-courses {
         width: 100%;
         margin-top: 20px;
     }

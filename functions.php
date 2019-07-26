@@ -32,4 +32,6 @@ add_theme_support('post-thumbnails');
 $template_diretorio = get_template_directory();
 
 require_once($template_diretorio . '/custom_post_type/about.php');
-require_once($template_diretorio . '/custom_post_type/experiences.php');
+require_once($template_diretorio . '/custom_post_type/certifications.php');
+require_once($template_diretorio . '/custom_post_type/skills.php');
+require_once($template_diretorio . '/custom_post_type/courses.php');
