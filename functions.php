@@ -15,11 +15,11 @@ function kolitech_add_css_scripts() {
 add_action( 'wp_enqueue_scripts', 'kolitech_add_css_scripts');
 
 ///////////////////////////////////////////////////////////
-/* Add menu */
-register_nav_menus( array(
-    'primary'   => __( 'Primary Menu', 'kolitech' ),
-    'secondary' => __( 'Secondary Menu', 'kolitech' )
-) );
+ //Registering Navigation Menu
+ function register_menu() {
+   register_nav_menu('primary', __('Primary Menu'));
+} 
+add_action('init', 'register_menu');
 
 
 ////////////////////////////////////////////////////////////
@@ -31,7 +31,20 @@ add_theme_support('post-thumbnails');
 //Carrega os custon posts
 $template_diretorio = get_template_directory();
 
+require_once($template_diretorio . '/custom_post_type/about-section.php');
+require_once($template_diretorio . '/custom_post_type/contact-section.php');
 require_once($template_diretorio . '/custom_post_type/about.php');
 require_once($template_diretorio . '/custom_post_type/certifications.php');
 require_once($template_diretorio . '/custom_post_type/skills.php');
 require_once($template_diretorio . '/custom_post_type/courses.php');
+
+require_once($template_diretorio . '/custom_post_type/contact.php');
+require_once($template_diretorio . '/custom_post_type/telephones.php');
+require_once($template_diretorio . '/custom_post_type/emails.php');
+require_once($template_diretorio . '/custom_post_type/social-media.php');
+
+
+
+
+
+

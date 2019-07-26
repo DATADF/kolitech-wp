@@ -3,31 +3,31 @@
 ////////////////////////////////////////////////////////////
 /* Custom Post Type Start */
 // Creating a About Custom Post Type
-function kolitech_about_custom_post_type() {
+function kolitech_telephone_custom_post_type() {
 	$labels = array(
-		'name'                => __( 'About' ),
-		'singular_name'       => __( 'About'),
-		'menu_name'           => __( 'About'),
-		'parent_item_colon'   => __( 'Parent About'),
-		'all_items'           => __( 'About'),
-		'view_item'           => __( 'View About'),
-		//'add_new_item'        => __( 'Add New About'),
-		//'add_new'             => __( 'Add New'),
-		'edit_item'           => __( 'Edit About'),
-		'update_item'         => __( 'Update About'),
-		'search_items'        => __( 'Search About'),
+		'name'                => __( 'Telephones' ),
+		'singular_name'       => __( 'Telephone'),
+		'menu_name'           => __( 'Telephones'),
+		'parent_item_colon'   => __( 'Parent Telephones'),
+		'all_items'           => __( 'Telephones'),
+		'view_item'           => __( 'View Telephone'),
+		'add_new_item'        => __( 'Add New Telephone'),
+		'add_new'             => __( 'Add New'),
+		'edit_item'           => __( 'Edit Telephone'),
+		'update_item'         => __( 'Update Telephones'),
+		'search_items'        => __( 'Search Telephones'),
 		'not_found'           => __( 'Not Found'),
 		'not_found_in_trash'  => __( 'Not found in Trash')
 	);
 	$args = array(
-		'label'               => __( 'about'),
-		'description'         => __( 'Best Crunchify About'),
+		'label'               => __( 'telephone'),
+		'description'         => __( 'Best Crunchify telephone'),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'thumbnail'),
+		'supports'            => array( 'title'),
 		'public'              => true,
 		'hierarchical'        => false,
 		'show_ui'             => true,
-		'show_in_menu'        => 'about-sections',
+		'show_in_menu'        => 'contact-sections',
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
 		'has_archive'         => true,
@@ -39,9 +39,9 @@ function kolitech_about_custom_post_type() {
 		'capability_type'     => 'page',
 		'menu_icon'   => 'dashicons-id-alt',
 );
-	register_post_type( 'about', $args );
+	register_post_type( 'telephone', $args );
 }
-add_action( 'init', 'kolitech_about_custom_post_type', 0 );
+add_action( 'init', 'kolitech_telephone_custom_post_type', 0 );
 
 /*Custom Post type end*/
 

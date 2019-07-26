@@ -100,7 +100,7 @@
                             <?php the_field('skill'); ?> // <?php the_field('skill_percentage'); ?>%
                         </h2>
                         <div class="progress">
-                            <div class="progress-bar" style="width: <?php the_field('skill_percentage'); ?>%" role="progressbar" aria-valuenow="<?php the_field('skill_percentage'); ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" style="width: <?php the_field('skill_percentage'); ?>%;" role="progressbar" aria-valuenow="<?php the_field('skill_percentage'); ?>" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                     <?php endwhile; wp_reset_postdata(); endif; ?>
@@ -175,43 +175,84 @@
     <!-- Contact -->
     <section id="contact" class="contact py-5">
         <div class="container">
-            <h2 class="pt-5">Contact <strong>US</strong></h2>
+            <!-- Início loop Contact -->
+            <?php
+                $argsContact = array(
+                    'post_type' => 'contact',
+                    'showposts' => 1,
+                    'post_status' => 'publish',
+                    'order' => 'DESC'
+                ); 
+                $the_query = new WP_Query ( $argsContact ); 
+            ?>
+            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <h2 class="pt-5"><?php the_title(); ?> <strong>US</strong></h2>
     
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ex eaque earum nulla reiciendis quas, rem
-                tempore eius corporis distinctio illum voluptas! Quaerat, amet nihil! Eos saepe dolore provident fugiat
-                facilis laudantium fuga ipsam distinctio, alias hic voluptate velit assumenda accusamus? Iusto dolorem
-                doloremque similique deleniti incidunt? Quod, fugit quas.</p>
-            
+            <p><?php the_field('text'); ?></p>
+            <?php endwhile; wp_reset_postdata(); endif; ?>
+            <!-- Fim loop Contact -->
+
             <div class="flex-container">
                 <div class="means-contact">
                     <h2>means of contact</h2>
                     <h3>telephones</h3>
                     <div class="form-group">
                         <ul>
-                            <li><strong>Fixed: </strong>
-                                <p>+55 5654-56489</p>
-                            </li>
-                            <li><strong>Cell Phone: </strong>
-                                <p>+55 5654-56489</p>
-                            </li>
+                            <!-- Início loop Telephone -->
+                            <?php
+                                $argsTelephone = array(
+                                    'post_type' => 'telephone',
+                                    'showposts' => -1,
+                                    'post_status' => 'publish',
+                                    'order' => 'ASC'
+                                ); 
+                                $the_query = new WP_Query ( $argsTelephone ); 
+                            ?>
+                            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                                <li><strong><?php the_field('type'); ?>: </strong>
+                                    <p><?php the_field('cod_pais'); ?> <?php the_field('ddd'); ?> <?php the_field('number'); ?></p>
+                                </li>
+                            <?php endwhile; wp_reset_postdata(); endif; ?>
+                            <!-- Fim loop Telephone -->
                         </ul>
                     </div>
                     <h3>E-mails</h3>
                     <div class="form-group">
                         <ul>
-                            <li><strong>Option 1: </strong>
-                                <p><a href="mailto:bitelo@gmail.com">bitelo@gmail.com</a></p>
+                            <!-- Início loop E-mails -->
+                            <?php
+                                $argsEmails = array(
+                                    'post_type' => 'home-emails',
+                                    'showposts' => -1,
+                                    'post_status' => 'publish',
+                                    'order' => 'DESC'
+                                ); 
+                                $the_query = new WP_Query ( $argsEmails ); 
+                            ?>
+                            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            <li><strong><?php the_field('type'); ?>: </strong>
+                                <p><a href="mailto:<?php the_field('e-mail'); ?>"><?php the_field('e-mail'); ?></a></p>
                             </li>
-                            <li><strong>Option 2: </strong>
-                                <p><a href="mailto:kolitech@koli.tech">kolitech@koli.tech</a></p>
-                            </li>
+                            <?php endwhile; wp_reset_postdata(); endif; ?>
+                            <!-- Fim loop E-mails -->
                         </ul>
                     </div>
                     <h3>social media</h3>
                     <ul class="mb-5">
-                        <li><a href="#"><i class="fab fa-facebook"></a></i></li>
-                        <li><a href="#"><i class="fab fa-twitter"></a></i></li>
-                        <li><a href="#"><i class="fab fa-instagram"></a></i></li>
+                        <!-- Início loop Social Media -->
+                            <?php
+                                $argsSocialMedia = array(
+                                    'post_type' => 'social-medias',
+                                    'showposts' => -1,
+                                    'post_status' => 'publish',
+                                    'order' => 'ASC'
+                                ); 
+                                $the_query = new WP_Query ( $argsSocialMedia ); 
+                            ?>
+                            <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <li><a href="<?php the_field('link_social_media'); ?>"><i class="<?php the_field('icon_social_media'); ?>"></i></a></li>
+                        <?php endwhile; wp_reset_postdata(); endif; ?>
+                        <!-- Fim loop Social Media -->
                     </ul>
                 </div>
                 
