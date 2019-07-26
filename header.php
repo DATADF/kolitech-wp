@@ -16,7 +16,7 @@
 
 
     <!-- Navgation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
         <div class="container">
             <a class="navbar-brand" href="/"><img src="<?php echo $template_directory;?>/image/logo.svg" alt=""></a>
             <!-- Brand and toggle get grouped for better mobile display -->

@@ -37,7 +37,7 @@
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="blog" class="btn btn-my">Blog</a>
+                        <a href="blog" class="nav-link">Blog</a>
                     </li>
                 </ul>
             </div>
