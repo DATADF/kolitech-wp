@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>KOLI.TECH</title>
+    <title>KOLI.TECH Blog</title>
     <?php wp_head(); ?>
 
   </head>
@@ -16,31 +16,26 @@
 
 
     <!-- Navgation -->
-    <nav class="scroll navbar navbar-expand-lg bg-light fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
         <div class="container">
             <a class="navbar-brand" href="/"><img src="<?php echo $template_directory;?>/image/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#scroll">
-                <span class="navbar-toggler"><i class="fas fa-bars"></i></span>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler"><i class="fas fa-bars text-dark"></i></span>
             </button>
-    
-            <div class="collapse navbar-collapse" id="scroll">
-
-            
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="blog" class="btn btn-my">Blog</a>
-                    </li>
-                </ul>
-            </div>
+        
+            <?php
+            wp_nav_menu( array(
+                'theme_location'    => 'primary',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav ml-auto',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker(),
+            ) );
+            ?>
         </div>
     </nav>
     <!-- Navgation -->

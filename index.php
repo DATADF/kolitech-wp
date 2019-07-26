@@ -1,6 +1,16 @@
 <?php /* template name: home */ ?>
 
-<?php get_header(); ?>
+<?php 
+
+    if(is_front_page())
+    {
+        get_header('home');
+    }
+    else
+    {
+        get_header();
+    }
+?>
 
     <!-- Hero -->
     <section id="home" class="hero">

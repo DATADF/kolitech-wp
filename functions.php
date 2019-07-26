@@ -15,11 +15,15 @@ function kolitech_add_css_scripts() {
 add_action( 'wp_enqueue_scripts', 'kolitech_add_css_scripts');
 
 ///////////////////////////////////////////////////////////
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+
  //Registering Navigation Menu
- function register_menu() {
-   register_nav_menu('primary', __('Primary Menu'));
-} 
-add_action('init', 'register_menu');
+register_nav_menus( array(
+	'primary' => __( 'Primary Menu', 'KOLITECH' ),
+) );
 
 
 ////////////////////////////////////////////////////////////

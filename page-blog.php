@@ -1,3 +1,4 @@
+<?php /* template name: Page Blog */ ?>
 <?php get_header(); ?>
 
 <section class="py-5">
