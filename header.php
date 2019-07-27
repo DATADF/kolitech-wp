@@ -36,6 +36,7 @@
                 'walker'            => new WP_Bootstrap_Navwalker(),
             ) );
             ?>
+            
         </div>
     </nav>
     <!-- Navgation -->
