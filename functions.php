@@ -22,7 +22,7 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
  //Registering Navigation Menu
 register_nav_menus( array(
-	'primary' => __( 'Primary Menu', 'KOLITECH' ),
+	'primary' => __( 'Primary Menu'),
 ) );
 
 

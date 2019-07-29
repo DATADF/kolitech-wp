@@ -4,6 +4,7 @@
      
 
         <div class="container">
+        <?php wp_list_categories('title_li='); ?>
             <small>&#169; koli.tech 2019</small>
         </div>
     </section>
