@@ -284,6 +284,38 @@ body {
   color: #00b8dd !important;
 }
 
+.dropdown-menu {
+  background: #f7f7f7 !important;
+  border: 1px solid #dfdfdf !important;
+}
+
+.cat-item {
+  padding: 5px 10px;
+  text-align: start;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.cat-item:last-child {
+  border-bottom: 0;
+}
+
+.cat-item:hover {
+  background: #F8F5F0;
+}
+
+.cat-item a {
+  color: #212529;
+  display: block;
+  text-transform: uppercase;
+  font-size: .67rem;
+  font-weight: 500;
+}
+
+.cat-item a:hover {
+  color: #00b8dd;
+  text-decoration: none;
+}
+
 .hero {
   position: relative;
   top: 0;
@@ -607,6 +639,10 @@ body {
   padding: 0.9rem 0;
   font-size: 1rem;
   background: #212529;
+}
+
+h2 strong {
+  color: #00b8dd !important;
 }
 
 .articles {

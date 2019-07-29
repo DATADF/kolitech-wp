@@ -46,9 +46,3 @@ require_once($template_diretorio . '/custom_post_type/contact.php');
 require_once($template_diretorio . '/custom_post_type/telephones.php');
 require_once($template_diretorio . '/custom_post_type/emails.php');
 require_once($template_diretorio . '/custom_post_type/social-media.php');
-
-
-
-
-
-

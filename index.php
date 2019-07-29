@@ -21,7 +21,7 @@
                 <?php
                     $args = array(
                         'post_type' => 'post',
-                        'category_name' => 'destaque-slide',
+                        'category_name' => 'destaque',
                         'showposts' => -1,
                         'post_status' => 'publish',
                         'orderby' => 'rand',
