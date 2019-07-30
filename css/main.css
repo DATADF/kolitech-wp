@@ -45,12 +45,9 @@ body {
   background: #8E8C84 !important;
 }
 
-.text {
-  color: #ffffff;
-}
-
-.text-primary {
+.text-primary p a {
   color: #00b8dd !important;
+  font-weight: 600;
 }
 
 .flex-container {
@@ -542,6 +539,18 @@ body {
   margin-top: 10px;
 }
 
+.contact .means-contact .btn-primary,
+.contact .form-contact .btn-primary {
+  background-color: #00b8dd !important;
+  color: #212529;
+}
+
+.contact .means-contact .btn-primary:hover,
+.contact .form-contact .btn-primary:hover {
+  background-color: #ffffff !important;
+  color: #00b8dd;
+}
+
 .contact .means-contact h2,
 .contact .form-contact h2 {
   color: #00b8dd !important;
@@ -711,7 +720,13 @@ h2 strong {
 
 .articles .article figure img {
   width: 100%;
-  image-rendering: optimizeQuality;
+  max-height: 300px;
+  -o-object-fit: none;
+     object-fit: none;
+  /* Do not scale the image */
+  -o-object-position: center;
+     object-position: center;
+  /* Center the image within the element */
 }
 
 .sidebar {
@@ -731,35 +746,28 @@ h2 strong {
   image-rendering: optimizeQuality;
 }
 
-.sidebar .last-posts {
-  margin-top: 20px;
+.sidebar li {
+  list-style: none;
+  counter-increment: myCounter;
 }
 
-.sidebar .last-posts div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.sidebar .last-posts div small {
-  font-size: 1.5rem;
-  color: #98978B;
-}
-
-.sidebar .last-posts div a {
+.sidebar li a {
   width: 100%;
   text-transform: capitalize;
   color: #00b8dd;
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-size: 0.9rem;
   text-decoration: none;
+  font-weight: 600;
+  display: block;
 }
 
-.sidebar .last-posts div a:hover {
+.sidebar li a:hover {
+  color: #98978B;
+}
+
+.sidebar li a::before {
+  content: "0" counter(myCounter) ". ";
+  font-size: 1.5rem;
   color: #98978B;
 }
 

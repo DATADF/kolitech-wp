@@ -19,6 +19,16 @@
         width: 50%;
         margin-top: 10px;
 
+        .btn-primary {
+            background-color: $primary !important;
+            color: $dark;
+
+            &:hover {
+                background-color: $secondary !important;
+                color: $primary;
+            }
+        }
+
         h2 {
             color: $primary !important;
             text-align: left;

@@ -1,19 +1,12 @@
-<?php /* template name: Page Blog */ ?>
+<?php /* template name: Page Certification */ ?>
 <?php 
-    if(is_front_page())
-    {
-        get_header('home');
-    }
-    else
-    {
-        get_header();
-    }
+    get_header('pages');
 ?>
 
 <section class="py-5">
     <div class="container">
         <hr>
-        <h2 class="py-5"><strong>My</strong> Personal <strong>Blog</strong></h2>
+        <h2 class="py-5"><strong><?php the_title(); ?> teste</strong></h2>
         <hr>
 
         <div class="row">
@@ -23,18 +16,17 @@
                     <!-- Start Articles -->
                     <div class="articles">
 
-                    <?php
-                        $args = array(
-                            'post_type' => 'post',
-                            'category_name' => '',
-                            'showposts' => 3,
-                            'post_status' => 'publish',
-                            //'orderby' => 'rand',
-                            'order' => 'DESC'
-                        ); 
-                        $the_query = new WP_Query ( $args ); 
-                    ?>
-                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <?php
+                            $args = array(
+                                'post_type' => 'certifications',
+                                'showposts' => 3,
+                                'post_status' => 'publish',
+                                //'orderby' => 'rand',
+                                'order' => 'DESC'
+                            ); 
+                            $the_query = new WP_Query ( $args ); 
+                        ?>
+                        <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                         <article class="article">
                             
                             <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
@@ -42,15 +34,8 @@
                             <small>
                                 <p>Categories: <?php the_category(' / '); ?></p>
                             </small>
-                            <small>
-                                <p>Tags: <?php the_tags('', ' / ', ''); ?></p>
-                            </small>
-                            <figure>
-                                <?php if ( has_post_thumbnail() ) : ?>
-                                    <?php the_post_thumbnail( 'thumbs' ); ?>
-                                <?php endif; ?>
-                            </figure>
-                            <?php the_excerpt(); ?>
+                            
+                            <?php the_field('details'); ?>
                             <a class="btn my-btn-primary" href="<?php the_permalink(); ?>">read more</a>
                         </article>
                     <?php endwhile;	endif; ?>

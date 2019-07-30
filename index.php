@@ -266,27 +266,10 @@
                     </ul>
                 </div>
                 
-                <form class="form-contact">
+                <div class="form-contact">
                     <h2>send your message</h2>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="subject" class="form-control" id="subject" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                    </div>
-                
-                    <button class="btn my-btn-primary" type="submit">Send</button>
-                </form>
+                    <?php echo do_shortcode('[contact-form-7 id="182" title="Contact Index"]'); ?>
+                </div>
                 
             </div>
         </div>

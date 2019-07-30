@@ -63,7 +63,11 @@ h2 strong {
 
             img {
                 width: 100%;
-                image-rendering: optimizeQuality;
+                max-height: 300px;
+                object-fit: none;
+                /* Do not scale the image */
+                object-position: center;
+                /* Center the image within the element */
             }
         }
     }
@@ -85,32 +89,30 @@ h2 strong {
         image-rendering: optimizeQuality;
     }
 
+    li {
+        list-style: none;
+
+        counter-increment: myCounter;
 
 
-    .last-posts {
-        margin-top: 20px;
-        
-        div {
+        a {
+            width: 100%;
+            text-transform: capitalize;
+            color: $primary;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
 
-        display: flex;
-        flex-direction: column;
 
-            small {
-                font-size: 1.5rem;
+            &:hover {
                 color: $gray-500;
             }
 
-            a {
-                width: 100%;
-                text-transform: capitalize;
-                color: $primary;
-                font-size: 1rem;
-                margin-bottom: 10px;
-                text-decoration: none;
-
-                &:hover {
-                    color: $gray-500;
-                }
+            &::before {
+                content: "0"counter(myCounter) ". ";
+                font-size: 1.5rem;
+                color: $gray-500;
             }
         }
     }

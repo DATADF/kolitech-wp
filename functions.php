@@ -23,12 +23,19 @@ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
  //Registering Navigation Menu
 register_nav_menus( array(
 	'primary' => __( 'Primary Menu'),
+	'secondary' => __( 'Pages Menu'),
 ) );
 
 
 ////////////////////////////////////////////////////////////
 /* Thumbnails */
 add_theme_support('post-thumbnails');
+
+function recortes() {
+	add_image_size( 'thumbs', 99999, false);
+	add_image_size( 'single', 1200, 99999, true);
+}
+add_action('after_setup_theme','recortes');
 
 
 ////////////////////////////////////////////////////////////
@@ -46,3 +53,28 @@ require_once($template_diretorio . '/custom_post_type/contact.php');
 require_once($template_diretorio . '/custom_post_type/telephones.php');
 require_once($template_diretorio . '/custom_post_type/emails.php');
 require_once($template_diretorio . '/custom_post_type/social-media.php');
+
+
+////////////////////////////////////////////////////////////
+//Criando uma area de widgets
+function kolitech1_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'sidebar',
+		'before_widget' => '<div class="last-posts">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => 'Sidebar-site',
+		'id' => 'sidebar-site',
+		'before_widget' => '<div class="last-posts">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'kolitech1_widgets_init' );

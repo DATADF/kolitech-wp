@@ -1,38 +1,5 @@
 <?php get_header(); ?>
 
-    <!-- Hero -->
-    <!-- <section id="home" class="hero">
-        
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <div class="container">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="scroll carousel-inner">
-                    <div class="carousel-item active">
-                        <h1>Lorem, ipsum dolor.</h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-                        <button href="single.html" class="btn my-btn-outline">Read More</button>
-                    </div>
-                    <div class="carousel-item">
-                        <h1>Lorem ipsum dolor sit .</h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                        <button href="single.html" class="btn my-btn-outline">Read More</button>
-                    </div>
-                    <div class="carousel-item ">
-                        <h1>Lorem ipsum.</h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-                        <button href="single.html" class="btn my-btn-outline">Read More</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </section> -->
-    <!-- Hero -->
-
     <!-- Start about -->
     <section id="about" class="about py-5">
         <div  class="container">

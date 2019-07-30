@@ -43,13 +43,13 @@ body {
     }
 }
 
-.text {
-    color: $secondary;
+.text-primary p a {
 
-    &-primary {
-        color: $primary !important;
-    }
+    color: $primary !important;
+    font-weight: 600;
+
 }
+
 
 .flex-container {
     display: flex;

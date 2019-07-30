@@ -1,9 +1,11 @@
-<?php get_header(); ?>
+<?php 
+    get_header();
+?>
 
 <section class="py-5">
     <div class="container">
         <hr>
-        <h2 class="py-5 text-primary"><p><?php the_category(' / '); ?></p></h2>
+        <h2 class="py-5"><p>Categories: <?php the_category(' / '); ?></p></h2>
         <hr>
 
         <div class="row">
