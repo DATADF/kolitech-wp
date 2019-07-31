@@ -56,9 +56,9 @@
                     <?php endwhile;	endif; ?>
 
                         <!-- Pagination -->
-                        
-                            <?php get_template_part('template-parts/content', 'pagination'); ?>
-                        
+                            <div class="card-body">
+                                <?php get_template_part('template-parts/content', 'pagination'); ?>
+                            </div>
                         <!-- Pagination -->
                     </div>
                     <!-- End Articles -->
