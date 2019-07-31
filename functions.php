@@ -78,5 +78,3 @@ function kolitech1_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'kolitech1_widgets_init' );
-
-
