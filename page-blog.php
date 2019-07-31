@@ -53,12 +53,13 @@
                             <?php the_excerpt(); ?>
                             <a class="btn my-btn-primary" href="<?php the_permalink(); ?>">read more</a>
                         </article>
+                        
                     <?php endwhile;	endif; ?>
 
                         <!-- Pagination -->
-                            <div class="card-body">
-                                <?php get_template_part('template-parts/content', 'pagination'); ?>
-                            </div>
+                        <div class="card-body">
+                            <?php get_template_part('template-parts/content', 'pagination'); ?>
+                        </div>
                         <!-- Pagination -->
                     </div>
                     <!-- End Articles -->
