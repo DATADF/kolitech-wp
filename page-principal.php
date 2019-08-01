@@ -96,7 +96,7 @@
                     <?php
                         $argsSkills = array(
                             'post_type' => 'skill',
-                            'showposts' => -1,
+                            'showposts' => 5,
                             'post_status' => 'publish',
                             'order' => 'ASC'
                         ); 
@@ -134,7 +134,7 @@
                             <?php
                                 $argsCertifications = array(
                                     'post_type' => 'certification',
-                                    'showposts' => -1,
+                                    'showposts' => 5,
                                     'post_status' => 'publish',
                                     'order' => 'DESC'
                                 ); 
@@ -142,7 +142,7 @@
                             ?>
                             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                                <li><a href="<?php the_permalink(); ?>"><?php the_field('certification'); ?></a> - <small><?php the_field('date'); ?></small></li>
+                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('date'); ?></small></li>
 
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop certification -->
@@ -163,7 +163,7 @@
                             <?php
                                 $argsCourses = array(
                                     'post_type' => 'courses',
-                                    'showposts' => -1,
+                                    'showposts' => 5,
                                     'post_status' => 'publish',
                                     'order' => 'DESC'
                                 ); 
@@ -171,7 +171,7 @@
                             ?>
                             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                                <li><a href="<?php the_permalink(); ?>"><?php the_field('course'); ?></a> - <small><?php the_field('start'); ?> to <?php the_field('end'); ?></small></li>
+                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('start'); ?> to <?php the_field('end'); ?></small></li>
 
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop courses -->
