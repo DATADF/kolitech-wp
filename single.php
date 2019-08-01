@@ -12,7 +12,7 @@
 <section class="py-5">
         <div class="container">
             <hr>
-            <h2 class="py-5"><strong><?php the_title(); ?></strong></h2>
+            <h2 class="py-2"><strong><?php the_title(); ?></strong></h2>
             <hr>
 
             <div class="row">
@@ -46,7 +46,17 @@
 
                         
                         <!-- Start Aside -->
-                            <?php get_template_part('template-parts/sidebar'); ?>
+                            <?php 
+
+                            if(is_front_page())
+                            {
+                                get_template_part('template-parts/content', 'sidebar-site');
+                            }
+                            else
+                            {
+                                get_template_part('template-parts/content', 'sidebar');
+                            }
+                        ?>
                         <!-- End Aside -->
                 </div>
             </div>

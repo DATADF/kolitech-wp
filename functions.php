@@ -53,6 +53,7 @@ require_once($template_diretorio . '/custom_post_type/contact.php');
 require_once($template_diretorio . '/custom_post_type/telephones.php');
 require_once($template_diretorio . '/custom_post_type/emails.php');
 require_once($template_diretorio . '/custom_post_type/social-media.php');
+require_once($template_diretorio . '/custom_post_type/publicity.php');
 
 
 ////////////////////////////////////////////////////////////
@@ -78,3 +79,28 @@ function kolitech1_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'kolitech1_widgets_init' );
+
+
+////////////////////////////////////////////////////////////
+// Paginação Categories / 
+function wordpress_pagination() {
+					
+      global $wp_query;
+
+      $pages = 999999999;
+
+      echo paginate_links( array(
+            'base' => str_replace( $pages, '%#%', esc_url( get_pagenum_link( $pages ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+			'total' => $wp_query->max_num_pages,
+			'show_all'     => false,
+			'end_size'     => 3,
+			'mid_size'     => 1,
+			'prev_next'    => true,
+			'prev_text'    => __( '<i class="fas fa-arrow-alt-circle-left"></i>' ),
+			'next_text'    => __( '<i class="fas fa-arrow-alt-circle-right"></i>' ),
+			'add_args'     => false,
+			'add_fragment' => ''
+      ) );
+}

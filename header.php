@@ -41,11 +41,11 @@
 
             if(is_front_page())
             {
-                get_template_part('template-parts/navbar-site');
+                get_template_part('template-parts/content', 'navbar-site');
             }
             else
             {
-                get_template_part('template-parts/navbar-blog');
+                get_template_part('template-parts/content', 'navbar-blog');
             }
         ?>
     </nav>

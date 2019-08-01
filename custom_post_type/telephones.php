@@ -34,7 +34,7 @@ function kolitech_telephone_custom_post_type() {
 		'can_export'          => true,
 		'exclude_from_search' => false,
 	    'yarpp_support'   	  => true,
-		'taxonomies' 	      => array('post_tag'),
+		'taxonomies' 	      => array(),
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
 		'menu_icon'   => 'dashicons-id-alt',

@@ -23,7 +23,7 @@ function kolitech_about_certification_custom_post_type() {
 		'label'               => __( 'Certification'),
 		'description'         => __( 'Best Crunchify Certifications'),
 		'labels'              => $labels,
-		'supports'            => array('title'),
+		'supports'            => array('title', 'thumbnail', 'excerpt', 'editor'),
 		'public'              => true,
 		'hierarchical'        => false,
 		'show_ui'             => true,
@@ -33,11 +33,11 @@ function kolitech_about_certification_custom_post_type() {
 		'has_archive'         => true,
 		'can_export'          => true,
 		'exclude_from_search' => false,
-	        'yarpp_support'       => true,
-		'taxonomies' 	      => array('post_tag'),
+	    'yarpp_support'       => true,
+		'taxonomies' 	      => array(),
 		'publicly_queryable'  => true,
         'capability_type'     => 'page',
-        'menu_icon'   => 'dashicons-awards',
+		'menu_icon'   => 'dashicons-awards',
 );
 	register_post_type( 'certification', $args );
 }

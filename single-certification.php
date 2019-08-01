@@ -5,7 +5,7 @@
 <section class="py-5">
         <div class="container">
             <hr>
-            <h2 class="py-5"><strong class="text-primary"><?php the_title(); ?></strong></h2>
+            <h2 class="py-2"><strong class="text-dark">Certification: </strong><strong><?php the_title(); ?></strong></h2>
             <hr>
 
             <div class="row">
@@ -22,11 +22,9 @@
                             <small><h3 class="mb-2">Date: <?php the_field('date'); ?></h3></small>
 
                             <figure>
-                                
-                                
-                                <img src="<?php the_field('logo_certification'); ?>" alt="">
-                                
-                                
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                    <?php the_post_thumbnail( 'thumbs' ); ?>
+                                <?php endif; ?>
                             </figure>
 
                             <?php the_field('details'); ?>
@@ -42,11 +40,11 @@
 
                             if(is_front_page())
                             {
-                                get_template_part('template-parts/sidebar');
+                                get_template_part('template-parts/content', 'sidebar');
                             }
                             else
                             {
-                                get_template_part('template-parts/sidebar-site');
+                                get_template_part('template-parts/content', 'sidebar-site');
                             }
                         ?>
                         <!-- End Aside -->

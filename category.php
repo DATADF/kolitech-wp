@@ -3,7 +3,7 @@
 <section class="py-5">
     <div class="container">
         <hr>
-        <h2 class="py-5 text-primary"><p><?php the_category(' / '); ?></p></h2>
+        <h2 class="py-2"><strong><?php single_cat_title(); ?></strong></h2>
         <hr>
 
         <div class="row">
@@ -13,7 +13,8 @@
                 <!-- Start Articles -->
                 <div class="articles">
 
-                <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+                    <!-- the loop -->
+                    <?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
                     <article class="article">
                         
                         <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
@@ -32,13 +33,39 @@
                         <?php the_excerpt(); ?>
                         <a class="btn my-btn-primary" href="<?php the_permalink(); ?>">read more</a>
                     </article>
-                <?php endwhile;	endif; ?>
+                <?php endwhile; ?>
+                    <!-- end of the loop -->
+                
+                    <?php wp_reset_postdata(); ?>
+                    
+                    <?php else : ?>
+                        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                    <?php endif; ?>
+
+
+                <!-- Pagination -->
+                <div class="pagination-posts">
+                    <div class="pagination">
+                        <?php wordpress_pagination(); ?>
+                    </div>
+                </div>
+                <!-- Pagination -->
                 </div>
                     <!-- End Articles -->
 
                     
                 <!-- Start Aside -->
-                    <?php get_template_part('template-parts/sidebar'); ?>
+                <?php 
+
+                    if(is_front_page())
+                    {
+                        get_template_part('template-parts/content', 'sidebar-site');
+                    }
+                    else
+                    {
+                        get_template_part('template-parts/content', 'sidebar');
+                    }
+                ?>
                 <!-- End Aside -->
                 
             </div>

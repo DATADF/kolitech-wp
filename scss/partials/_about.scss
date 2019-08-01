@@ -39,6 +39,19 @@
         color: $primary;
         font-weight: 400;
     }
+
+    .btn-primary {
+        background-color: $primary !important;
+        color: $secondary;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 0;
+
+        &:hover {
+            background-color: $gray-400 !important;
+            color: $dark;
+        }
+    }
 }
 
 .skills {

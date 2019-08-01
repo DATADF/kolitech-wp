@@ -147,6 +147,7 @@
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop certification -->
                         </ul>
+                        <a href="https://kolitech-wp.dev/blog/certification/" class="btn btn-primary mb-4">All Certifications</a>
                     </div>
 
                     <div class="courses">
@@ -175,6 +176,7 @@
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop courses -->
                         </ul>
+                        <a href="https://kolitech-wp.dev/blog/courses/" class="btn btn-primary mb-4">All Courses</a>
                     </div>
                 </div>
             </div>

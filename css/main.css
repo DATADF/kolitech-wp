@@ -436,6 +436,21 @@ body {
   font-weight: 400;
 }
 
+.skills .btn-primary,
+.certification-courses .btn-primary {
+  background-color: #00b8dd !important;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+}
+
+.skills .btn-primary:hover,
+.certification-courses .btn-primary:hover {
+  background-color: #ced4da !important;
+  color: #212529;
+}
+
 .skills {
   text-align: left;
 }
@@ -865,5 +880,12 @@ h2 strong {
   .sidebar .last-posts div a:hover {
     color: #98978B;
   }
+}
+
+.sidebar figure img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  max-height: 450px;
 }
 /*# sourceMappingURL=main.css.map */

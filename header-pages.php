@@ -14,7 +14,7 @@
     <!-- Navgation -->
     <nav class="scroll navbar navbar-expand-lg fixed-top">
         <?php 
-          get_template_part('template-parts/navbar-pages');
+          get_template_part('template-parts/content', 'navbar-pages');
         ?>
     </nav>
     <!-- Navgation -->

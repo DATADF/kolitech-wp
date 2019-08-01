@@ -13,7 +13,7 @@
 <section class="py-5">
     <div class="container">
         <hr>
-        <h2 class="py-5"><strong>My</strong> Personal <strong>Blog</strong></h2>
+        <h2 class="py-2"><strong>My</strong> Personal <strong>Blog</strong></h2>
         <hr>
 
         <div class="row">
@@ -27,22 +27,17 @@
                     $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
                     $args = array(
                         'post_type' => 'post',
-                        'posts_per_page' => 3,
                         'paged' => $paged,
                     );
 
                     // the query
-                    $the_query = new WP_Query( $args ); ?>
-                    
-                    <?php if ( $the_query->have_posts() ) : ?>
-                    
+                    $wp_query = new WP_Query( $args ); ?>
 
-                    
                     <!-- the loop -->
-                    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
                         
-                        <article class="article">
-                        
+                    <article class="article">
+                    
                         <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
                         <small><p>Date: <?php the_time('d/m/Y'); ?></p></small>
                         <small>
@@ -69,41 +64,31 @@
                         <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                     <?php endif; ?>
                     
-                        
-                        
-
-
+                    
                     <!-- Pagination -->
                     <div class="pagination-posts">
-                        <?php
-                        
-                            $pages = 999999999; // need an unlikely integer
-
-                            echo paginate_links( array(
-                                'base'         => str_replace( $pages, '%#%', esc_url( get_pagenum_link( $pages ) ) ),
-                                'format' => '?paged=%#%',
-                                'current' => max( 1, get_query_var('paged') ),
-                                'total' => $the_query->max_num_pages,
-                                'show_all'     => false,
-                                'end_size'     => 3,
-                                'mid_size'     => 1,
-                                'prev_next'    => true,
-                                'prev_text'    => __( '<i class="fas fa-arrow-alt-circle-left"></i>' ),
-                                'next_text'    => __( '<i class="fas fa-arrow-alt-circle-right"></i>' ),
-                                'add_args'     => false,
-                                'add_fragment' => ''
-                            ) );
-                        ?>
+                        <div class="pagination">
+                            <?php wordpress_pagination(); ?>
+                        </div>
                     </div>
                     <!-- Pagination -->
-
 
                 </div>
                 <!-- End Articles -->
 
                     
                     <!-- Start Aside -->
-                        <?php get_template_part('template-parts/sidebar'); ?>
+                    <?php 
+
+                            if(is_front_page())
+                            {
+                                get_template_part('template-parts/content', 'sidebar-site');
+                            }
+                            else
+                            {
+                                get_template_part('template-parts/content', 'sidebar');
+                            }
+                        ?>
                     <!-- End Aside -->
             </div>
         </div>

@@ -17,7 +17,7 @@
    'show_ui' => true,
    'show_in_menu' => 'contact-sections',
    'rewrite' => array('slug' => 'social-medias', ),
-   'taxonomies' 	      => array('post_tag'),
+   'taxonomies' 	      => array(),
   );
 
   register_post_type( 'social-medias', $args );
