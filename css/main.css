@@ -248,8 +248,8 @@ body {
   background-color: #00b8dd !important;
 }
 
-.bg-light {
-  background-color: red !important;
+.navbar {
+  background: #ffffff;
 }
 
 .navbar .navbar-toggler {
@@ -282,14 +282,14 @@ body {
 }
 
 .dropdown-menu {
-  background: #f7f7f7 !important;
-  border: 1px solid #dfdfdf !important;
+  background: #ffffff !important;
+  border: 1px solid #F8F5F0 !important;
 }
 
 .cat-item {
   padding: 5px 10px;
   text-align: start;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid #f7f7f7;
 }
 
 .cat-item:last-child {
@@ -297,7 +297,7 @@ body {
 }
 
 .cat-item:hover {
-  background: #F8F5F0;
+  background: #f7f7f7;
 }
 
 .cat-item a {
@@ -392,8 +392,8 @@ body {
 
 .about {
   min-height: 100vh;
-  background-color: #F8F5F0 !important;
-  color: #212529 !important;
+  background-color: #F8F5F0;
+  color: #212529;
 }
 
 .about strong {
@@ -727,6 +727,61 @@ h2 strong {
   -o-object-position: center;
      object-position: center;
   /* Center the image within the element */
+}
+
+.articles .pagination-posts {
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.articles .pagination-posts .current {
+  color: #ffffff;
+  background: #00b8dd;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+.articles .pagination-posts a {
+  padding: 5px;
+  color: #98978B;
+}
+
+.articles .pagination-posts .page-numbers {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.articles .pagination-posts .page-numbers:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background: #98978B;
+}
+
+.articles .pagination-posts .prev,
+.articles .pagination-posts .next {
+  color: #98978B;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.articles .pagination-posts .prev:hover,
+.articles .pagination-posts .next:hover {
+  text-decoration: none;
+  color: #00b8dd;
+  background: none;
 }
 
 .sidebar {

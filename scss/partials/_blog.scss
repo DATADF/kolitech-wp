@@ -71,6 +71,50 @@ h2 strong {
             }
         }
     }
+
+    .pagination-posts {
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .current {
+            color: $secondary;
+            background: $primary;
+            padding: 5px 10px;
+            font-weight: 600;
+        }
+
+        a {
+            padding: 5px;
+            color: $gray-500;
+        }
+
+        .page-numbers {
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                text-decoration: none;
+                color: $secondary;
+                background: $gray-500;
+            }
+        }
+
+        .prev,
+        .next {
+            color: $gray-500;
+            font-weight: 600;
+            font-size: 1.5rem;
+
+            &:hover {
+                text-decoration: none;
+                color: $primary;
+                background: none;
+            }
+        }
+    }
 }
 
 .sidebar {

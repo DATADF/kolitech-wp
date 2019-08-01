@@ -56,7 +56,7 @@
     <!-- Hero -->
 
     <!-- Start about -->
-    <section id="about" class="about py-5">
+    <section id="about" class="about py-3">
         <div  class="container">
             <!-- Início loop About -->
             <?php
@@ -69,7 +69,7 @@
                 $the_query = new WP_Query ( $argsAbout ); 
             ?>
             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <h2 class="pt-5"><?php the_title();?> <strong class="text-primary">US</strong></h2>
+            <h2><?php the_title();?> <strong class="text-primary">US</strong></h2>
             <figure>
                 <?php
                     if ( has_post_thumbnail() ) {
@@ -183,7 +183,7 @@
     <!-- End about -->
 
     <!-- Contact -->
-    <section id="contact" class="contact py-5">
+    <section id="contact" class="contact py-3">
         <div class="container">
             <!-- Início loop Contact -->
             <?php
@@ -196,7 +196,7 @@
                 $the_query = new WP_Query ( $argsContact ); 
             ?>
             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <h2 class="pt-5"><?php the_title(); ?> <strong>US</strong></h2>
+            <h2><?php the_title(); ?> <strong>US</strong></h2>
     
             <p><?php the_field('text'); ?></p>
             <?php endwhile; wp_reset_postdata(); endif; ?>

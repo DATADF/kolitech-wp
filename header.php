@@ -36,7 +36,7 @@
 
 
     <!-- Navgation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation">
       <?php 
 
             if(is_front_page())

@@ -1,12 +1,8 @@
-.bg-light {
-    background-color: red !important;
-}
-
-
 .navbar {
 
-    .navbar-toggler {
+    background: $secondary;
 
+    .navbar-toggler {
         border: 0;
         padding: 10px 5px 10px 3px;
         cursor: pointer;
@@ -39,22 +35,22 @@
 
 
 .dropdown-menu {
-    background: $gray-100 !important;
-    border: 1px solid $gray-300 !important;
+    background: $secondary !important;
+    border: 1px solid $gray-200 !important;
 }
 
 .cat-item {
 
     padding: 5px 10px;
     text-align: start;
-    border-bottom: 1px solid $gray-300;
+    border-bottom: 1px solid $gray-100;
 
     &:last-child {
         border-bottom: 0;
     }
 
     &:hover {
-        background: $gray-200;
+        background: $gray-100;
     }
 
 

@@ -12,7 +12,7 @@
   <body data-spy='scroll' data-target='#scroll' data-offset="100">
 
     <!-- Navgation -->
-    <nav class="scroll navbar navbar-expand-lg bg-light fixed-top">
+    <nav class="scroll navbar navbar-expand-lg fixed-top">
         <?php 
           get_template_part('template-parts/navbar-site');
         ?>
