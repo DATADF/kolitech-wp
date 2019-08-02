@@ -20,6 +20,7 @@
                         $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
                         $args = array(
                             'post_type' => 'courses',
+                            'showposts' => 5,
                             'post_status' => 'publish',
                             'order' => 'ASC',
                             'paged' => $paged,

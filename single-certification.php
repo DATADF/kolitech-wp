@@ -31,7 +31,7 @@
 							<?php the_field('details'); ?>
 						</article>
 					<?php endwhile;	endif; ?>
-					<strong><a href="<?php echo $template_directory;?>/home/certification/" class="btn my-btn-primary">All Certifications</a></strong>
+					<strong><a href="<?php echo $template_directory;?>/home/certification/" class="btn my-btn-primary"><i class="fas fa-arrow-left mr-1"></i>All Certifications</a></strong>
 					</div>
 						<!-- End Articles -->
 

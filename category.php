@@ -3,7 +3,7 @@
 <section class="py-5">
     <div class="container">
         <hr>
-        <h2 class="py-2"><strong class="text-dark">Category: </strong><strong><?php single_cat_title(); ?></strong></h2>
+        <h2 class="py-2"><strong class="text-dark"></strong><strong><?php single_cat_title(); ?></strong></h2>
         <hr>
 
         <div class="row">

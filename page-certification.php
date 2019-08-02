@@ -14,12 +14,13 @@
                 <div class="flex-container">
 
                     <!-- Start Articles -->
-                    <div class="articles">
+                    <div class="articles" id="certifications">
 
                         <?php
                         $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
                         $args = array(
                             'post_type' => 'certification',
+                            'showposts' => 5,
                             'post_status' => 'publish',
                             'order' => 'ASC',
                             'paged' => $paged,

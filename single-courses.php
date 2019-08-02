@@ -39,7 +39,7 @@
                             <?php the_content(); ?>
                         </article>
                     <?php endwhile;	endif; ?>
-                    <strong><a href="<?php echo $template_directory;?>/home/certification/" class="btn my-btn-primary">See All</a></strong>
+                    <strong><a href="<?php echo $template_directory;?>/home/courses/" class="btn my-btn-primary"><i class="fas fa-arrow-left mr-1"></i>See All</a></strong>
                     </div>
                         <!-- End Articles -->
 

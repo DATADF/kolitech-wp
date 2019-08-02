@@ -1,5 +1,6 @@
 .sidebar {
     min-height: 68vh;
+
     figure {
         img {
             width: 100%;
@@ -8,4 +9,13 @@
             max-height: 450px;
         }
     }
+
+    .tag-cloud-link {
+        color: $my-blue !important;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
 }

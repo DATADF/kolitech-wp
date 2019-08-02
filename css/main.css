@@ -535,7 +535,7 @@ body {
     height: 150px;
     max-width: 150px;
   }
-  .skills,
+  .skills, .skills-page,
   .certification-courses {
     width: 100%;
     margin-top: 20px;
@@ -913,5 +913,10 @@ h2 strong {
   max-width: 300px;
   height: auto;
   max-height: 450px;
+}
+
+.sidebar .tag-cloud-link {
+  color: #00b8dd !important;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */

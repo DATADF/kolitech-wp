@@ -15,7 +15,7 @@
                   'depth'             => 1,
                   'container'         => 'div',
                   'container_class'   => 'collapse navbar-collapse',
-                  'container_id'      => 'bs-example-navbar-collapse-1',
+                  'container_id'      => 'scroll',
                   'menu_class'        => 'nav navbar-nav ml-auto',
                   'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                   'walker'            => new WP_Bootstrap_Navwalker(),

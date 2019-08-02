@@ -1,5 +1,6 @@
 <aside class="sidebar">
-    <h2>Publicity</h2>
+    <?php if ( dynamic_sidebar('sidebar-site') ) : else : endif; ?>
+    <!-- <h2>Publicity</h2> -->
     <?php
     $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
     $args = array(
@@ -25,6 +26,6 @@
     <?php wp_reset_postdata(); ?>
     
     <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-    <?php endif; ?>
+        <!-- <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p> -->
+    <?php endif; ?> 
 </aside>
