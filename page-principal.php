@@ -106,7 +106,7 @@
                     <div class="block-skill-progress">
                         <h2>
                             <i class="<?php the_field('icon'); ?>" style="color: <?php the_field('icon_color'); ?>;"></i> 
-                            <?php the_field('skill'); ?> // <?php the_field('skill_percentage'); ?>%
+                            <?php the_field('skill'); ?><i class="fas fa-arrow-right"></i> <strong><?php the_field('skill_percentage'); ?>%</strong>
                         </h2>
                         <div class="progress">
                             <div class="progress-bar" style="width: <?php the_field('skill_percentage'); ?>%;" role="progressbar" aria-valuenow="<?php the_field('skill_percentage'); ?>" aria-valuemin="0" aria-valuemax="100"></div>
@@ -136,7 +136,7 @@
                                     'post_type' => 'certification',
                                     'showposts' => 5,
                                     'post_status' => 'publish',
-                                    'order' => 'DESC'
+                                    'order' => 'ASC'
                                 ); 
                                 $the_query = new WP_Query ( $argsCertifications ); 
                             ?>
@@ -164,7 +164,7 @@
                                     'post_type' => 'courses',
                                     'showposts' => 5,
                                     'post_status' => 'publish',
-                                    'order' => 'DESC'
+                                    'order' => 'ASC'
                                 ); 
                                 $the_query = new WP_Query ( $argsCourses ); 
                             ?>
@@ -175,7 +175,7 @@
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop courses -->
                         </ul>
-                        <a href="<?php echo $template_directory;?>/home/courses/" class="btn btn-primary mb-4">All Courses</a>
+                        <a href="<?php echo $template_directory;?>/home/courses/" class="btn btn-primary mb-4">See all</a>
                     </div>
                 </div>
             </div>

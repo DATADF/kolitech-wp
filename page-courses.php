@@ -20,6 +20,8 @@
                         $paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
                         $args = array(
                             'post_type' => 'courses',
+                            'post_status' => 'publish',
+                            'order' => 'ASC',
                             'paged' => $paged,
                         ); 
                             $wp_query = new WP_Query ( $args ); 
@@ -34,7 +36,7 @@
                                     <?php the_post_thumbnail( 'thumbs' ); ?>
                                 <?php endif; ?>
                             </figure>
-                            <p>Year: <strong><?php the_field('year'); ?></strong></strong></p>
+                            <p><strong>Year:</strong> <?php the_field('year'); ?></p>
                             <p><?php the_excerpt(); ?></p>
                             <a class="btn my-btn-primary" href="<?php the_permalink(); ?>">read more</a>
                         </article>

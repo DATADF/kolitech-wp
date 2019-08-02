@@ -39,6 +39,7 @@
                             <?php the_content(); ?>
                         </article>
                     <?php endwhile;	endif; ?>
+                    <strong><a href="<?php echo $template_directory;?>/home/certification/" class="btn my-btn-primary">See All</a></strong>
                     </div>
                         <!-- End Articles -->
 

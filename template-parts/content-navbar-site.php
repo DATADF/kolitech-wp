@@ -9,18 +9,18 @@
 
     
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#about" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contact" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a href="blog" class="nav-link">Blog</a>
-            </li>
+            <?php
+              wp_nav_menu( array(
+                  'theme_location'    => 'third',
+                  'depth'             => 1,
+                  'container'         => 'div',
+                  'container_class'   => 'collapse navbar-collapse',
+                  'container_id'      => 'bs-example-navbar-collapse-1',
+                  'menu_class'        => 'nav navbar-nav ml-auto',
+                  'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                  'walker'            => new WP_Bootstrap_Navwalker(),
+              ) );
+            ?>
         </ul>
     </div>
 </div>
