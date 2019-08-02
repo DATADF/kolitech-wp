@@ -1,11 +1,11 @@
 <?php 
-    get_header();
+    get_header('pages');
 ?>
 
 <section class="py-5">
     <div class="container">
         <hr>
-        <h2 class="py-2"><p><?php single_tag_title(); ?></p></h2>
+        <h2 class="py-2"><p><?php the_title(); ?></p></h2>
         <hr>
 
         <div class="row">

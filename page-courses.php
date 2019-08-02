@@ -1,4 +1,4 @@
-<?php /* template name: Page Certification */ ?>
+<?php /* template name: Page Courses */ ?>
 <?php 
     get_header('pages');
 ?>
@@ -25,6 +25,7 @@
                             $wp_query = new WP_Query ( $args ); 
                         ?>
                         <?php if ( $wp_query->have_posts() ) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+                        <!-- Start Article -->
                         <article class="article">
                     
                             <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
@@ -37,7 +38,8 @@
                             <p><?php the_excerpt(); ?></p>
                             <a class="btn my-btn-primary" href="<?php the_permalink(); ?>">read more</a>
                         </article>
-                    <?php endwhile;	endif; ?>
+                        <!-- End Article -->
+                        <?php endwhile;	endif; ?>
 
                         <!-- Pagination -->
                         <div class="pagination-posts">

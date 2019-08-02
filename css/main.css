@@ -392,12 +392,17 @@ body {
 
 .about {
   min-height: 100vh;
-  background-color: #F8F5F0;
+  background-color: #ffffff;
   color: #212529;
 }
 
 .about strong {
   color: #00b8dd !important;
+}
+
+.about .text-primary {
+  color: #00b8dd !important;
+  text-decoration: underline;
 }
 
 .about .text-bar {

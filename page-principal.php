@@ -77,7 +77,9 @@
                     }
                 ?>
             </figure>
-            <div class="text-center"><?php the_content(); ?></div>
+            <div class="text-center mb-4"><?php the_field('short_text_about'); ?> 
+                <a href="<?php echo $template_directory;?>/home/about/" class="text-primary">More Information</a>
+            </div>
             <?php endwhile; wp_reset_postdata(); endif; ?>
             <!-- Fim loop About -->
             
@@ -143,11 +145,10 @@
                             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
                                 <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('date'); ?></small></li>
-
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop certification -->
                         </ul>
-                        <a href="https://kolitech-wp.dev/blog/certification/" class="btn btn-primary mb-4">All Certifications</a>
+                        <a href="<?php echo $template_directory;?>/home/certification/" class="btn btn-primary mb-4">All Certifications</a>
                     </div>
 
                     <div class="courses">
@@ -176,7 +177,7 @@
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop courses -->
                         </ul>
-                        <a href="https://kolitech-wp.dev/blog/courses/" class="btn btn-primary mb-4">All Courses</a>
+                        <a href="<?php echo $template_directory;?>/home/courses/" class="btn btn-primary mb-4">All Courses</a>
                     </div>
                 </div>
             </div>

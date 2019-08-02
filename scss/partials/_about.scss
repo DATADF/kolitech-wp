@@ -1,12 +1,17 @@
 .about {
     min-height: 100vh;
-    background-color: $gray-200;
+    background-color: $secondary;
     color: $dark;
 
     strong {
         color: $primary !important;
     }
 
+    .text-primary {
+        color: $my-blue !important;
+        text-decoration: underline;
+    }
+    
     .text-bar {
         color: $secondary;
     }
