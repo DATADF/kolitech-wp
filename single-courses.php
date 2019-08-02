@@ -13,7 +13,7 @@
 <section class="py-5">
         <div class="container">
             <hr>
-            <h2 class="py-2"><strong class="text-dark">Course:</strong> <strong><?php the_title(); ?></strong></h2>
+            <h2 class="py-2"><strong>EDUCATION PROFILE</strong></h2>
             <hr>
 
             <div class="row">
@@ -26,15 +26,16 @@
                     
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <article class="article">
-                            
-                            <small><h3 class="mb-2">Period: <?php the_field('start'); ?> to <?php the_field('end'); ?></h3></small>
-
+                            <strong><h3 class="mb-2"><?php the_title(); ?></h3></strong>
                             <figure>
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <?php the_post_thumbnail( 'thumbs' ); ?>
                                 <?php endif; ?>
                             </figure>
-
+                            <p class="mb-2"><strong>Year:</strong> <?php the_field('year'); ?></p>
+                            <p class="mb-2"><strong>Instituition:</strong> <?php the_field('instituition'); ?></p>
+                            <p class="mb-2"><strong>Local:</strong> <?php the_field('local'); ?></p>
+                            <p class="mb-2"><strong>Parents:</strong> <?php the_field('parents'); ?></p>
                             <?php the_content(); ?>
                         </article>
                     <?php endwhile;	endif; ?>

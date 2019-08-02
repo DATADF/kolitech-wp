@@ -5,7 +5,7 @@
 <section class="py-5">
 		<div class="container">
 			<hr>
-			<h2 class="py-2"><strong class="text-dark">Certification: </strong><strong><?php the_title(); ?></strong></h2>
+			<h2 class="py-2"><strong>Certification</strong></h2>
 			<hr>
 
 			<div class="row">
@@ -19,7 +19,8 @@
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<article class="article">
 							
-							<small><h3 class="mb-2">Date: <?php the_field('date'); ?></h3></small>
+							<small><h3 class="mb-2"><?php the_title(); ?></h3></small>
+							<p class="mb-2"><strong>Theme:</strong> <?php the_field('theme'); ?></p>
 
 							<figure>
 								<?php if ( has_post_thumbnail() ) : ?>
@@ -30,6 +31,7 @@
 							<?php the_field('details'); ?>
 						</article>
 					<?php endwhile;	endif; ?>
+					<strong><a href="<?php echo $template_directory;?>/home/certification/" class="btn my-btn-primary">All Certifications</a></strong>
 					</div>
 						<!-- End Articles -->
 

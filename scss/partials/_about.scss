@@ -11,7 +11,7 @@
         color: $my-blue !important;
         text-decoration: underline;
     }
-    
+
     .text-bar {
         color: $secondary;
     }
@@ -35,6 +35,9 @@
 }
 
 
+.skills-page {
+    width: 78%;
+}
 
 .skills,
 .certification-courses {
@@ -59,7 +62,8 @@
     }
 }
 
-.skills {
+.skills,
+.skills-page {
     text-align: left;
 
     .block-skill-progress {
@@ -75,6 +79,12 @@
             text-align: left;
             font-size: 1rem;
             color: $dark;
+        }
+
+        .fa-arrow-right {
+            font-size: 1rem;
+            color: $primary;
+            margin: 0 10px;
         }
 
         i {

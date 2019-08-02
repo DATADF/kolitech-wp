@@ -28,12 +28,12 @@
                         <article class="article">
                     
                             <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-                            <p>Year: <strong><?php the_time('Y'); ?></strong></p>
                             <figure>
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <?php the_post_thumbnail( 'thumbs' ); ?>
                                 <?php endif; ?>
                             </figure>
+                            <p class="mb-2"><strong>Theme:</strong> <?php the_field('theme'); ?></p>
                             <p><?php the_excerpt(); ?></p>
                             <a class="btn my-btn-primary" href="<?php the_permalink(); ?>">read more</a>
                         </article>

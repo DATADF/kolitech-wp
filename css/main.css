@@ -430,6 +430,10 @@ body {
   margin: 30px;
 }
 
+.skills-page {
+  width: 78%;
+}
+
 .skills,
 .certification-courses {
   width: 49%;
@@ -456,11 +460,13 @@ body {
   color: #212529;
 }
 
-.skills {
+.skills,
+.skills-page {
   text-align: left;
 }
 
-.skills .block-skill-progress {
+.skills .block-skill-progress,
+.skills-page .block-skill-progress {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,7 +477,8 @@ body {
   margin-bottom: 20px;
 }
 
-.skills .block-skill-progress h2 {
+.skills .block-skill-progress h2,
+.skills-page .block-skill-progress h2 {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,7 +491,15 @@ body {
   color: #212529;
 }
 
-.skills .block-skill-progress i {
+.skills .block-skill-progress .fa-arrow-right,
+.skills-page .block-skill-progress .fa-arrow-right {
+  font-size: 1rem;
+  color: #00b8dd;
+  margin: 0 10px;
+}
+
+.skills .block-skill-progress i,
+.skills-page .block-skill-progress i {
   font-size: 2rem;
   margin-right: 10px;
 }
@@ -654,6 +669,7 @@ body {
 }
 
 .footer {
+  width: 100%;
   height: 5vh;
   border-top: 1px solid #8E8C84;
   display: -webkit-box;
@@ -665,6 +681,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: auto;
   padding: 0.9rem 0;
   font-size: 1rem;
   background: #212529;
@@ -885,6 +902,10 @@ h2 strong {
   .sidebar .last-posts div a:hover {
     color: #98978B;
   }
+}
+
+.sidebar {
+  min-height: 68vh;
 }
 
 .sidebar figure img {

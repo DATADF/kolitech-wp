@@ -6,7 +6,7 @@
 <section class="py-5">
     <div class="container">
         <hr>
-        <h2 class="py-2"><strong><?php the_title(); ?></strong></h2>
+        <h2 class="py-2"><strong>EDUCATION PROFILE</strong></h2>
         <hr>
 
         <div class="row">
@@ -29,12 +29,12 @@
                         <article class="article">
                     
                             <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-                            <p>Period: <strong><?php the_field('start'); ?></strong> To <strong><?php the_field('end'); ?></strong></p>
                             <figure>
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <?php the_post_thumbnail( 'thumbs' ); ?>
                                 <?php endif; ?>
                             </figure>
+                            <p>Year: <strong><?php the_field('year'); ?></strong></strong></p>
                             <p><?php the_excerpt(); ?></p>
                             <a class="btn my-btn-primary" href="<?php the_permalink(); ?>">read more</a>
                         </article>

@@ -86,14 +86,11 @@
 
             <div class="flex-container">
                 <div class="skills">
-                    <h3>skills</h3>
+                    <h3>SKILLS & ENDORSEMENTS</h3>
                     <?php $the_query = new WP_Query ( $argsAbout ); ?>
                     <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                         <p><?php the_field('short_text_skills'); ?></p>
                     <?php endwhile; wp_reset_postdata(); endif; ?>
-                    
-
-
                     <!-- Início loop Skills -->
                     <?php
                         $argsSkills = array(
@@ -117,6 +114,7 @@
                     </div>
                     <?php endwhile; wp_reset_postdata(); endif; ?>
                     <!-- Fim loop Skills -->
+                    <a href="<?php echo $template_directory;?>/home/skills/" class="btn btn-primary mb-4">All Skills</a>
                 </div>
                 
                 
@@ -144,7 +142,7 @@
                             ?>
                             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('date'); ?></small></li>
+                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('theme'); ?></small></li>
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop certification -->
                         </ul>
@@ -152,7 +150,7 @@
                     </div>
 
                     <div class="courses">
-                        <h3>courses</h3>
+                        <h3>EDUCATION PROFILE </h3>
                         
                         <?php $the_query = new WP_Query ( $argsAbout ); ?>
                         <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -172,7 +170,7 @@
                             ?>
                             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <small><?php the_field('start'); ?> to <?php the_field('end'); ?></small></li>
+                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <strong class="text-dark"><?php the_field('year'); ?></strong></li>
 
                             <?php endwhile; wp_reset_postdata(); endif; ?>
                             <!-- Fim loop courses -->
