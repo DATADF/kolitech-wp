@@ -11,7 +11,7 @@
     }
 ?>
 
-<section class="py-5">
+<section class="py-5" id="about">
     <div class="container">
         <hr>
         <h2 class="py-2"><strong><?php the_title(); ?></strong></h2>
