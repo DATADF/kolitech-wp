@@ -49,6 +49,7 @@ require_once($template_diretorio . '/custom_post_type/about.php');
 require_once($template_diretorio . '/custom_post_type/certifications.php');
 require_once($template_diretorio . '/custom_post_type/skills.php');
 require_once($template_diretorio . '/custom_post_type/courses.php');
+require_once($template_diretorio . '/custom_post_type/services.php');
 
 require_once($template_diretorio . '/custom_post_type/contact.php');
 require_once($template_diretorio . '/custom_post_type/telephones.php');
